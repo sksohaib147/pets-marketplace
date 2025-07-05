@@ -16,7 +16,7 @@ const About = () => {
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
-        const response = await axios.get('/api/about');
+        const response = await axios.get('http://localhost:5000/api/about');
         setAboutData(response.data);
         setLoading(false);
       } catch (err) {

@@ -17,7 +17,7 @@ const Products = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/products');
+      const res = await fetch('http://localhost:5000/api/products');
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Failed to fetch products');
       setProducts(data);

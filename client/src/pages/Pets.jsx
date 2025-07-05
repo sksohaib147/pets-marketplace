@@ -18,7 +18,7 @@ const Pets = () => {
       setLoading(true);
       setError('');
       try {
-        const res = await fetch('/api/pets');
+        const res = await fetch('http://localhost:5000/api/pets');
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || 'Failed to fetch pets');
         setPets(data);

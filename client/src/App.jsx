@@ -8,6 +8,11 @@ import { LanguageProvider } from './contexts/LanguageContext.jsx';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import Pets from './pages/Pets';
+import Products from './pages/Products';
+import About from './pages/About';
 
 const theme = createTheme({
   palette: {
@@ -78,6 +83,12 @@ function App() {
               <main className="flex-1">
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/signup" element={<Signup />}></Route>
+                  <Route path="/login" element={<Login />}></Route>
+                  <Route path="/pets" element={<Pets />}></Route>
+                  <Route path="/products" element={<Products />}></Route>
+                  <Route path="/about" element={<About />}></Route>
+
                 </Routes>
               </main>
               <Footer />
