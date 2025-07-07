@@ -4,8 +4,8 @@ import { FaPaw, FaHeart, FaShieldAlt, FaUsers, FaShoppingBag, FaHandshake } from
 import axios from 'axios';
 import { motion } from 'framer-motion';
 
-const MotionBox = motion(Box);
-const MotionPaper = motion(Paper);
+const MotionBox = motion.create(Box);
+const MotionPaper = motion.create(Paper);
 
 const About = () => {
   const [aboutData, setAboutData] = useState(null);

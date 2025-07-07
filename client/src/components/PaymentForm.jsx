@@ -6,7 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 import api from '../utils/api';
 
 // Load Stripe
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY || 'pk_test_your-publishable-key');
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_your-publishable-key');
 
 const PaymentFormContent = ({ amount, orderId, onSuccess, onError }) => {
   const stripe = useStripe();

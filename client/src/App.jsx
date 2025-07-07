@@ -13,6 +13,35 @@ import Login from './pages/Login';
 import Pets from './pages/Pets';
 import Products from './pages/Products';
 import About from './pages/About';
+// Import category pages
+import DogFoodDropdown from './pages/DogFoodDropdown';
+import CatFoodDropdown from './pages/CatFoodDropdown';
+import RabbitFoodDropdown from './pages/RabbitFoodDropdown';
+import ToysDropdown from './pages/ToysDropdown';
+import BeltsAndCagesDropdown from './pages/BeltsAndCagesDropdown';
+// Import user pages
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import Wishlist from './pages/Wishlist';
+import Profile from './pages/Profile';
+import Search from './pages/Search';
+import PetDetail from './pages/PetDetail';
+import ProductDetail from './pages/ProductDetail';
+import OrderHistory from './pages/OrderHistory';
+import OrderSuccess from './pages/OrderSuccess';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+// Import admin pages
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import UserManagement from './pages/admin/UserManagement';
+import ListingsManagement from './pages/admin/ListingsManagement';
+import Reports from './pages/admin/Reports';
+import AboutManagement from './pages/admin/AboutManagement';
+// Import dashboard pages
+import AdminDashboardHome from './pages/dashboard/AdminDashboardHome';
+import SellerDashboardHome from './pages/dashboard/SellerDashboardHome';
+import BuyerDashboardHome from './pages/dashboard/BuyerDashboardHome';
 
 const theme = createTheme({
   palette: {
@@ -51,8 +80,7 @@ function App() {
       <LanguageProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          {/* Tailwind test box */}
-          <div className="bg-red-500 text-white p-4">If this is red, Tailwind is working!</div>
+          {/* Removed Tailwind test box */}
           <Toaster 
             position="top-right"
             toastOptions={{
@@ -82,12 +110,46 @@ function App() {
               <Navbar />
               <main className="flex-1">
                 <Routes>
+                  {/* Main Routes */}
                   <Route path="/" element={<Home />} />
-                  <Route path="/signup" element={<Signup />}></Route>
-                  <Route path="/login" element={<Login />}></Route>
-                  <Route path="/pets" element={<Pets />}></Route>
-                  <Route path="/products" element={<Products />}></Route>
-                  <Route path="/about" element={<About />}></Route>
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/pets" element={<Pets />} />
+                  <Route path="/products" element={<Products />} />
+                  <Route path="/about" element={<About />} />
+                  
+                  {/* Category Routes */}
+                  <Route path="/dog-food" element={<DogFoodDropdown />} />
+                  <Route path="/cat-food" element={<CatFoodDropdown />} />
+                  <Route path="/rabbit-food" element={<RabbitFoodDropdown />} />
+                  <Route path="/toys" element={<ToysDropdown />} />
+                  <Route path="/belts-and-cages" element={<BeltsAndCagesDropdown />} />
+                  
+                  {/* User Pages */}
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/wishlist" element={<Wishlist />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/search" element={<Search />} />
+                  <Route path="/pet/:id" element={<PetDetail />} />
+                  <Route path="/product/:id" element={<ProductDetail />} />
+                  <Route path="/order-history" element={<OrderHistory />} />
+                  <Route path="/order-success" element={<OrderSuccess />} />
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
+                  <Route path="/reset-password" element={<ResetPassword />} />
+                  
+                  {/* Admin Routes */}
+                  <Route path="/admin/login" element={<AdminLogin />} />
+                  <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                  <Route path="/admin/users" element={<UserManagement />} />
+                  <Route path="/admin/listings" element={<ListingsManagement />} />
+                  <Route path="/admin/reports" element={<Reports />} />
+                  <Route path="/admin/about" element={<AboutManagement />} />
+                  
+                  {/* Dashboard Routes */}
+                  <Route path="/dashboard/admin" element={<AdminDashboardHome />} />
+                  <Route path="/dashboard/seller" element={<SellerDashboardHome />} />
+                  <Route path="/dashboard/buyer" element={<BuyerDashboardHome />} />
 
                 </Routes>
               </main>
